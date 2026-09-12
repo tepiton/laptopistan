@@ -1,4 +1,4 @@
-# laptopistan.com
+# laptopistan
 
 A minimal static website hosted on GitHub Pages.
 
