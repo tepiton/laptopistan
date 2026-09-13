@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>laptopistan.com</title>
   <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #eee;
+      --fg: #111;
+      --dim: #6b6b6b;
+      --line: #111;
+      --sel-bg: #ec3013;
+      --sel-fg: #fff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #333;
+        --fg: #eee;
+        --dim: #9a9a9a;
+        --line: #eee;
+      }
+    }
+
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -18,8 +37,8 @@
     }
 
     body {
-      background: #fff;
-      color: #111;
+      background: var(--bg);
+      color: var(--fg);
       font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
       font-weight: 300;
       display: grid;
@@ -35,12 +54,12 @@
     }
 
     header {
-      border-bottom: 1px solid #111;
+      border-bottom: 1px solid var(--line);
       padding-bottom: 10px;
     }
 
     footer {
-      border-top: 1px solid #111;
+      border-top: 1px solid var(--line);
       padding-top: 10px;
     }
 
@@ -51,7 +70,7 @@
     }
 
     .dim {
-      color: #6b6b6b;
+      color: var(--dim);
     }
 
     main {
@@ -73,7 +92,7 @@
 
     .frame {
       height: 100%;
-      border: 1px solid #111;
+      border: 1px solid var(--line);
       padding: 14px;
       box-sizing: border-box;
     }
@@ -87,8 +106,8 @@
     }
 
     ::selection {
-      background: #ec3013;
-      color: #fff;
+      background: var(--sel-bg);
+      color: var(--sel-fg);
     }
   </style>
 </head>
